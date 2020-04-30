@@ -9,7 +9,7 @@ import java.io.Serializable;
 public class User {
 
     @Id @GeneratedValue(strategy = GenerationType.AUTO) //entidade do tipo user
-    private long id;
+    private Integer id;
 
     @Column
     private String name;
@@ -35,7 +35,7 @@ public class User {
     public User() {
     }
 
-    public User(long id, String name, String tell, String cpf, String birthday, String address, boolean active, Character sex) {
+    public User(Integer id, String name, String tell, String cpf, String birthday, String address, boolean active, Character sex) {
         this.id = id;
         this.name = name;
         this.tell = tell;
@@ -46,11 +46,11 @@ public class User {
         this.sex = sex;
     }
 
-    public long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
