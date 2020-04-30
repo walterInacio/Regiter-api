@@ -35,6 +35,17 @@ public class User {
     public User() {
     }
 
+    public User(long id, String name, String tell, String cpf, String birthday, String address, boolean active, Character sex) {
+        this.id = id;
+        this.name = name;
+        this.tell = tell;
+        this.cpf = cpf;
+        this.birthday = birthday;
+        this.address = address;
+        this.active = active;
+        this.sex = sex;
+    }
+
     public long getId() {
         return id;
     }
