@@ -4,6 +4,9 @@ import com.agtech.register.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
+
 @Service
 public class UserService {
     @Autowired
@@ -20,4 +23,10 @@ public class UserService {
     public void delete(Integer id){
         userRepository.deleteById(id);
     }
+
+    public List<User> all(){
+        return userRepository.findAll();
+    }
+
 }
+
