@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 
 @RestController
 @CrossOrigin(origins = "*")
@@ -33,4 +35,11 @@ public class UserController {
     public void delete(@RequestParam(name = "id") Integer id){
         userService.delete(id);
     }
+
+    @RequestMapping(value = "/all", method = RequestMethod.GET)
+    public List<User> all(){
+        return userService.all();
+
+    }
 }
+
