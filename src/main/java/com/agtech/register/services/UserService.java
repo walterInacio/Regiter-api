@@ -3,9 +3,7 @@ import com.agtech.register.documents.User;
 import com.agtech.register.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
-
 
 @Service
 public class UserService {
@@ -24,9 +22,8 @@ public class UserService {
         userRepository.deleteById(id);
     }
 
-    public List<User> all(){
+    public List<User> finddAllUsers(){
         return userRepository.findAll();
     }
-
 }
 
